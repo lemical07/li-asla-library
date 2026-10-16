@@ -1,0 +1,26 @@
+{
+  "name": "li-asla-library",
+  "version": "1.0.0",
+  "description": "Proyecto-Review donde se pone en práctica lo visto en clase de cada día.",
+  "keywords": [
+    "NodeJS",
+    "ExpressJS",
+    "MySQL2",
+    "API"
+  ],
+  "homepage": "https://github.com/lemical07/li-asla-library#readme",
+  "bugs": {
+    "url": "https://github.com/lemical07/li-asla-library/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lemical07/li-asla-library.git"
+  },
+  "license": "ISC",
+  "author": "lemical07",
+  "type": "module",
+  "main": "servicio.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
