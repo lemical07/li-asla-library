@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#050709">
+    <meta name="description" content="ASLA Library: una experiencia moderna para descubrir, cuidar y compartir historias.">
+    <title>ASLA Library — Un mundo entre páginas</title>
+    <link rel="icon" type="image/png" href="/favicon/favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/variables.css">
+    <link rel="stylesheet" href="/css/principal.css">
+    <link rel="stylesheet" href="/css/componentes.css">
+    <link rel="stylesheet" href="/css/responsive.css">
+</head>
+<body class="pagina-inicio">
+    <header class="inicio-cabecera">
+        <a class="marca" href="/" aria-label="ASLA Library, inicio">
+            <img class="marca-imagen" src="/assets/images/logo/asla-logo.png" alt="Logotipo de ASLA Library">
+        </a>
+        <nav class="inicio-enlaces" aria-label="Navegación principal">
+            <a href="#experiencia">La experiencia</a>
+            <a href="/html/autenticacion/iniciar-sesion.html">Iniciar sesión</a>
+            <a class="boton boton--acento boton--compacto" href="/html/autenticacion/registro.html">Crear una cuenta <span aria-hidden="true">↗</span></a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-contenido">
+                <p class="sobretitulo"><span class="punto-estado"></span> TU PRÓXIMA HISTORIA COMIENZA AQUÍ</p>
+                <h1>Un mundo<br>entre <span>páginas.</span></h1>
+                <p class="hero-descripcion">Una biblioteca pensada para quienes saben que cada libro abre una nueva posibilidad.</p>
+                <div class="hero-acciones">
+                    <a class="boton boton--acento boton--grande" href="/html/autenticacion/iniciar-sesion.html">Entrar a mi biblioteca <span aria-hidden="true">→</span></a>
+                    <a class="enlace-sutil" href="/html/autenticacion/registro.html">Descubre ASLA <span aria-hidden="true">↗</span></a>
+                </div>
+                <div class="hero-nota">
+                    <span class="hero-nota-linea"></span>
+                    <p>LECTURA CON INTENCIÓN. <span>CONOCIMIENTO SIN LÍMITES.</span></p>
+                </div>
+            </div>
+            <div class="hero-indice" aria-hidden="true"><span>01</span><i></i><span>04</span></div>
+            <a class="hero-desplazar" href="#experiencia" aria-label="Desplazarse hacia abajo"><span></span> DESLIZA PARA EXPLORAR</a>
+        </section>
+
+        <section class="experiencia" id="experiencia">
+            <div class="experiencia-intro">
+                <p class="sobretitulo">MÁS QUE UNA COLECCIÓN</p>
+                <h2>Tu espacio para<br><span>seguir creciendo.</span></h2>
+            </div>
+            <div class="experiencia-detalle">
+                <p>Explora nuevas lecturas, conserva tu historial y mantén cada préstamo en orden. ASLA reúne todo lo que necesitas para disfrutar tu biblioteca, en un solo lugar.</p>
+                <a class="enlace-sutil" href="/html/autenticacion/registro.html">Comienza tu recorrido <span aria-hidden="true">→</span></a>
+            </div>
+            <div class="experiencia-fila">
+                <article><span class="experiencia-numero">01</span><div><h3>Descubre</h3><p>Encuentra tu próxima lectura entre los títulos disponibles.</p></div><span class="experiencia-icono" aria-hidden="true">⌕</span></article>
+                <article><span class="experiencia-numero">02</span><div><h3>Conecta</h3><p>Administra tus préstamos y compras desde tu perfil.</p></div><span class="experiencia-icono" aria-hidden="true">↗</span></article>
+                <article><span class="experiencia-numero">03</span><div><h3>Crece</h3><p>Un espacio para las ideas que te acompañan más allá de cada página.</p></div><span class="experiencia-icono" aria-hidden="true">✳</span></article>
+            </div>
+        </section>
+    </main>
+
+    <footer class="pie-inicio">
+        <a class="marca marca--pie" href="/"><img class="marca-imagen" src="/assets/images/logo/asla-logo.png" alt="ASLA Library"></a>
+        <p>Una historia a la vez.</p>
+        <span>ASLA LIBRARY <span id="anio-actual"></span></span>
+    </footer>
+    <script type="module" src="/js/paginas/inicio.js"></script>
+</body>
+</html>
