@@ -1,35 +1,23 @@
-import { body } from "express-validator";
+import { body } from 'express-validator';
 
-const prestamoCrearValidacion = [
+const prestamoCrearValidaciones = [
     body('usuario_id')
-        .notEmpty().withMessage('El ID del usuario es obligatorio')
-        .isInt({ min: 1 }).withMessage('El ID del usuario debe ser entero positivo'),
-
-    body('admin_id')
-        .notEmpty().withMessage('El ID del administrador es obligatorio')
-        .isInt({ min: 1 }).withMessage('El ID del admin debe ser entero positivo'), 
-
+        .isInt({ min: 1 }).withMessage('El usuario es obligatorio')
+        .toInt(),
     body('ejemplar_id')
-        .notEmpty().withMessage('El ID del ejemplar es obligatorio')
-        .isInt({ min: 1 }).withMessage('El ID del ejemplar debe ser entero positivo'), 
-
+        .isInt({ min: 1 }).withMessage('El ejemplar es obligatorio')
+        .toInt(),
     body('fecha_limite')
-        .notEmpty().withMessage('La fecha límite es obligatoria')
-        .isDate().withMessage('Ingrese una fecha válida (YYYY-MM-DD)') 
-
-        .custom((value) => {
-            const hoy = new Date(); hoy.setHours(0,0,0,0);
-            if (new Date(value) < hoy) throw new Error('fecha_limite no puede ser pasada');
+        .isDate({ format: 'YYYY-MM-DD', strictMode: true })
+        .withMessage('Ingrese una fecha límite válida')
+        .custom((valor) => {
+            const fecha = new Date(`${valor}T00:00:00.000Z`);
+            const hoy = new Date(`${new Date().toISOString().slice(0, 10)}T00:00:00.000Z`);
+            if (Number.isNaN(fecha.getTime()) || fecha < hoy) {
+                throw new Error('La fecha límite no puede ser anterior a hoy');
+            }
             return true;
-        }),
-
-    body('fecha_devolucion_real')
-        .optional({ nullable: true })
-        .isDate().withMessage('Debe ser una fecha válida'),
-
-    body('estado')
-        .optional({ nullable: true }) 
-        .isIn(['prestado', 'devuelto']).withMessage('Estado inválido')
+        })
 ];
 
-export default prestamoCrearValidacion;
+export default prestamoCrearValidaciones;
