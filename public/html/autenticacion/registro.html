@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#050709">
+    <title>Crear cuenta — ASLA Library</title>
+    <link rel="icon" type="image/png" href="/favicon/favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/variables.css">
+    <link rel="stylesheet" href="/css/principal.css">
+    <link rel="stylesheet" href="/css/componentes.css">
+    <link rel="stylesheet" href="/css/autenticacion.css">
+    <link rel="stylesheet" href="/css/responsive.css">
+</head>
+<body class="pagina-autenticacion">
+    <main class="auth-layout">
+        <a class="auth-regresar" href="/">← <span>Volver al inicio</span></a>
+        <section class="auth-lienzo" aria-label="Únete a ASLA Library">
+            <img class="auth-logo" src="/assets/images/logo/asla-logo.png" alt="ASLA Library">
+            <p class="sobretitulo">UN NUEVO CAPÍTULO COMIENZA</p>
+            <h1>Tu próxima<br>gran historia<br><span>empieza aquí.</span></h1>
+            <p class="auth-mensaje">Crea tu cuenta y encuentra el espacio para seguir explorando.</p>
+            <div class="auth-lienzo-pie"><span class="punto-estado"></span> LECTURA CON INTENCIÓN</div>
+        </section>
+        <section class="auth-panel">
+            <div class="auth-formulario auth-formulario--registro">
+                <p class="sobretitulo">FORMA PARTE DE ASLA</p>
+                <h2>Crea tu cuenta</h2>
+                <p class="texto-secundario">Unos datos y estás dentro.</p>
+                <form id="formulario-registro" novalidate>
+                    <div class="formulario-dos-columnas">
+                        <label class="campo">
+                            <span>Identificación</span>
+                            <input name="identificacion" autocomplete="off" required maxlength="20" placeholder="Tu identificación">
+                        </label>
+                        <label class="campo">
+                            <span>Teléfono <small>Opcional</small></span>
+                            <input name="telefono" type="tel" autocomplete="tel" maxlength="20" placeholder="+502 0000 0000">
+                        </label>
+                    </div>
+                    <div class="formulario-dos-columnas">
+                        <label class="campo">
+                            <span>Nombre</span>
+                            <input name="nombre" autocomplete="given-name" required maxlength="50" placeholder="Tu nombre">
+                        </label>
+                        <label class="campo">
+                            <span>Apellido</span>
+                            <input name="apellido" autocomplete="family-name" required maxlength="50" placeholder="Tu apellido">
+                        </label>
+                    </div>
+                    <label class="campo">
+                        <span>Dirección <small>Opcional</small></span>
+                        <input name="direccion" autocomplete="street-address" maxlength="200" placeholder="Tu dirección">
+                    </label>
+                    <label class="campo">
+                        <span>Correo electrónico</span>
+                        <input name="email" type="email" autocomplete="email" required maxlength="120" placeholder="tu@correo.com">
+                    </label>
+                    <label class="campo">
+                        <span>Contraseña</span>
+                        <input name="contrasena" type="password" autocomplete="new-password" required minlength="8" placeholder="Combina mayúsculas, números y símbolos">
+                        <small class="campo-ayuda">Al menos 8 caracteres, una mayúscula, un número y un símbolo.</small>
+                    </label>
+                    <button class="boton boton--acento boton--ancho boton--grande" type="submit">Crear mi cuenta <span aria-hidden="true">→</span></button>
+                </form>
+                <p class="auth-cambio">¿Ya tienes una cuenta? <a href="/html/autenticacion/iniciar-sesion.html">Inicia sesión</a></p>
+                <a class="auth-volver-movil" href="/">← Volver a ASLA Library</a>
+            </div>
+        </section>
+    </main>
+    <div id="zona-notificaciones" class="zona-notificaciones" aria-live="polite"></div>
+    <script type="module" src="/js/paginas/autenticacion.js"></script>
+</body>
+</html>
