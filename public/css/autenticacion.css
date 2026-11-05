@@ -1,0 +1,171 @@
+.pagina-autenticacion {
+    background:
+        radial-gradient(ellipse at 82% 10%, rgb(23 74 112 / 16%), transparent 42%),
+        var(--negro);
+}
+
+.auth-layout {
+    position: relative;
+    display: grid;
+    grid-template-columns: minmax(0, 1.02fr) minmax(440px, 0.98fr);
+    min-height: 100vh;
+}
+
+.auth-regresar {
+    position: absolute;
+    z-index: 3;
+    top: 2rem;
+    left: clamp(1.5rem, 4vw, 4.5rem);
+    color: var(--texto);
+    font-size: 0.85rem;
+}
+
+.auth-regresar:hover {
+    color: var(--blanco);
+}
+
+.auth-lienzo {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 7rem clamp(2rem, 7vw, 7rem);
+    overflow: hidden;
+    isolation: isolate;
+    background-image:
+        linear-gradient(90deg, rgb(5 7 9 / 42%), rgb(5 7 9 / 52%)),
+        linear-gradient(0deg, rgb(5 7 9 / 35%), transparent 48%),
+        url("/assets/images/fondos/asla-fondo.png");
+    background-position: 34% center;
+    background-size: cover;
+}
+
+.auth-lienzo::after {
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+    background: linear-gradient(90deg, rgb(5 7 9 / 18%), rgb(5 7 9 / 70%));
+    content: "";
+}
+
+.auth-logo {
+    width: 105px;
+    height: 86px;
+    margin: 0 0 3rem -0.7rem;
+    object-fit: cover;
+    object-position: center;
+    mix-blend-mode: screen;
+}
+
+.auth-lienzo h1 {
+    font-size: clamp(3rem, 5vw, 5.2rem);
+}
+
+.auth-lienzo .sobretitulo {
+    font-size: 0.66rem;
+}
+
+.auth-mensaje {
+    max-width: 390px;
+    margin: 1.4rem 0 0;
+    color: var(--texto);
+    font-size: 1rem;
+    line-height: 1.8;
+}
+
+.auth-lienzo-pie {
+    position: absolute;
+    bottom: 2.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
+    color: var(--texto-suave);
+    font-size: 0.67rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+}
+
+.auth-panel {
+    display: grid;
+    min-height: 100vh;
+    padding: 6rem clamp(2rem, 7vw, 7rem);
+    place-items: center;
+}
+
+.auth-formulario {
+    width: min(410px, 100%);
+}
+
+.auth-formulario .sobretitulo {
+    margin-bottom: 0.6rem;
+    font-size: 0.65rem;
+}
+
+.auth-formulario h2 {
+    margin: 0;
+    font-family: var(--fuente-titulos);
+    font-size: 2.1rem;
+    font-weight: 600;
+    letter-spacing: -0.06em;
+}
+
+.auth-formulario > .texto-secundario {
+    margin: 0.4rem 0 2rem;
+    font-size: 0.9rem;
+}
+
+.auth-formulario form {
+    display: grid;
+    gap: 1.15rem;
+}
+
+.auth-formulario .boton {
+    margin-top: 0.45rem;
+}
+
+.auth-ayuda {
+    margin: -0.3rem 0 0;
+    color: var(--texto-suave);
+    font-size: 0.76rem;
+    line-height: 1.6;
+}
+
+.auth-cambio {
+    margin: 1.7rem 0 0;
+    color: var(--texto-suave);
+    font-size: 0.83rem;
+    text-align: center;
+}
+
+.auth-cambio a {
+    color: var(--jade-claro);
+}
+
+.auth-cambio a:hover {
+    color: var(--jade-suave);
+}
+
+.auth-volver-movil {
+    display: none;
+}
+
+.auth-formulario--registro {
+    padding-block: 1.5rem;
+}
+
+.auth-formulario--registro > .texto-secundario {
+    margin-bottom: 1.4rem;
+}
+
+.auth-formulario--registro form {
+    gap: 0.85rem;
+}
+
+.auth-formulario--registro .campo input {
+    min-height: 42px;
+}
+
+.auth-formulario--registro .boton {
+    margin-top: 0.2rem;
+}

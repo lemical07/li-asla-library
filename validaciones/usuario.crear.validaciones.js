@@ -1,9 +1,9 @@
-import { body } from "express-validator";
+import { body } from 'express-validator';
 
 const usuarioCrearValidacion = [
     body('identificacion')
         .notEmpty().withMessage('Identificación obligatoria')
-        .isString().withMessage('Identificación debe ser texto') 
+        .isString().withMessage('Identificación debe ser texto')
         .isLength({ min: 1, max: 20 }).withMessage('Máximo 20 caracteres')
         .trim(),
 
@@ -21,8 +21,8 @@ const usuarioCrearValidacion = [
 
     body('telefono')
         .optional({ nullable: true })
-        .isString().withMessage('Teléfono debe ser texto') 
-        .isLength({ max: 20 }).withMessage('Máximo 20 caracteres') 
+        .isString().withMessage('Teléfono debe ser texto')
+        .isLength({ max: 20 }).withMessage('Máximo 20 caracteres')
         .matches(/^[\d+\-\s()]{7,20}$/).withMessage('Formato de teléfono inválido')
         .trim(),
 
@@ -34,16 +34,12 @@ const usuarioCrearValidacion = [
     body('email')
         .notEmpty().withMessage('Correo obligatorio')
         .isEmail().withMessage('Ingrese un correo válido')
-        .isLength({ max: 120 }).withMessage('Máximo 120 caracteres') 
+        .isLength({ max: 120 }).withMessage('Máximo 120 caracteres')
         .normalizeEmail().trim(),
 
     body('contrasena')
         .notEmpty().withMessage('Contraseña obligatoria')
-        .isStrongPassword().withMessage('Ingrese una contraseña segura'),
-
-    body('rol')
-        .optional({ nullable: true })
-        .isIn(['admin', 'lector']).withMessage('Rol inválido')
+        .isStrongPassword().withMessage('Ingrese una contraseña segura')
 ];
 
 export default usuarioCrearValidacion;

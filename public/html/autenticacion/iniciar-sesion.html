@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#050709">
+    <title>Iniciar sesión — ASLA Library</title>
+    <link rel="icon" type="image/png" href="/favicon/favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/variables.css">
+    <link rel="stylesheet" href="/css/principal.css">
+    <link rel="stylesheet" href="/css/componentes.css">
+    <link rel="stylesheet" href="/css/autenticacion.css">
+    <link rel="stylesheet" href="/css/responsive.css">
+</head>
+<body class="pagina-autenticacion">
+    <main class="auth-layout">
+        <a class="auth-regresar" href="/">← <span>Volver al inicio</span></a>
+        <section class="auth-lienzo" aria-label="Acceso a tu biblioteca">
+            <img class="auth-logo" src="/assets/images/logo/asla-logo.png" alt="ASLA Library">
+            <p class="sobretitulo">TU BIBLIOTECA, CONTIGO</p>
+            <h1>Las historias<br>te están <span>esperando.</span></h1>
+            <p class="auth-mensaje">Vuelve a ese lugar donde cada página abre una posibilidad.</p>
+            <div class="auth-lienzo-pie"><span class="punto-estado"></span> LECTURA CON INTENCIÓN</div>
+        </section>
+        <section class="auth-panel">
+            <div class="auth-formulario">
+                <p class="sobretitulo">BIENVENIDO DE NUEVO</p>
+                <h2>Inicia sesión</h2>
+                <p class="texto-secundario">Ingresa tus datos para continuar.</p>
+                <form id="formulario-inicio" novalidate>
+                    <label class="campo">
+                        <span>Correo electrónico</span>
+                        <input type="email" name="email" autocomplete="email" placeholder="tu@correo.com" required maxlength="120">
+                    </label>
+                    <label class="campo">
+                        <span>Contraseña</span>
+                        <input type="password" name="contrasena" autocomplete="current-password" placeholder="Tu contraseña" required>
+                    </label>
+                    <p class="auth-ayuda">¿Olvidaste tu contraseña? La recuperación no está habilitada en este servicio. Contacta al administrador.</p>
+                    <button class="boton boton--acento boton--ancho boton--grande" type="submit">Entrar a mi cuenta <span aria-hidden="true">→</span></button>
+                </form>
+                <p class="auth-cambio">¿Aún no tienes cuenta? <a href="/html/autenticacion/registro.html">Regístrate</a></p>
+                <a class="auth-volver-movil" href="/">← Volver a ASLA Library</a>
+            </div>
+        </section>
+    </main>
+    <div id="zona-notificaciones" class="zona-notificaciones" aria-live="polite"></div>
+    <script type="module" src="/js/paginas/autenticacion.js"></script>
+</body>
+</html>

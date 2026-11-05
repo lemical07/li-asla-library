@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#050709">
+    <title>Mi biblioteca — ASLA Library</title>
+    <link rel="icon" type="image/png" href="/favicon/favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/variables.css">
+    <link rel="stylesheet" href="/css/principal.css">
+    <link rel="stylesheet" href="/css/componentes.css">
+    <link rel="stylesheet" href="/css/administrador.css">
+    <link rel="stylesheet" href="/css/usuario.css">
+    <link rel="stylesheet" href="/css/responsive.css">
+</head>
+<body class="pagina-aplicacion">
+    <div class="aplicacion">
+        <aside class="barra-lateral" id="barra-lateral">
+            <a class="marca marca--panel" href="/" aria-label="ASLA Library">
+                <img class="marca-imagen" src="/assets/images/logo/asla-logo.png" alt="ASLA Library">
+                <span class="marca-texto">ASLA <strong>LIBRARY</strong></span>
+            </a>
+            <div class="perfil-lateral">
+                <span class="avatar" id="avatar-usuario">A</span>
+                <span class="perfil-identidad"><strong id="nombre-lateral">Mi cuenta</strong><small id="rol-lateral">LECTOR</small></span>
+            </div>
+            <nav class="navegacion-panel" id="navegacion-panel" aria-label="Menú principal"></nav>
+            <div class="lateral-pie">
+                <span class="lateral-estado"><i></i> SISTEMA DISPONIBLE</span>
+                <button class="boton-salir" id="boton-cerrar-sesion" data-accion="cerrar-sesion" type="button"><span aria-hidden="true">↗</span> Cerrar sesión</button>
+                <span class="lateral-version">ASLA LIBRARY · <span id="anio-panel"></span></span>
+            </div>
+        </aside>
+        <button class="fondo-menu" id="fondo-menu" aria-label="Cerrar menú"></button>
+        <main class="contenido-panel">
+            <header class="cabecera-panel">
+                <button class="boton-menu" id="boton-menu" data-accion="menu" aria-label="Abrir menú" aria-expanded="false"><span></span><span></span></button>
+                <div class="ruta-panel"><span>ASLA LIBRARY</span><span aria-hidden="true">/</span><strong id="ruta-actual">Inicio</strong></div>
+                <div class="cabecera-acciones">
+                    <span class="fecha-actual" id="fecha-actual"></span>
+                    <button class="avatar avatar--cabecera" id="avatar-cabecera" aria-label="Abrir perfil">A</button>
+                </div>
+            </header>
+            <section class="vista-panel" id="vista-panel" aria-live="polite"></section>
+        </main>
+    </div>
+    <div id="zona-notificaciones" class="zona-notificaciones" aria-live="polite"></div>
+    <dialog class="modal" id="modal-principal">
+        <form method="dialog" class="modal-cerrar-forma"><button class="modal-cerrar" aria-label="Cerrar">×</button></form>
+        <div id="contenido-modal"></div>
+    </dialog>
+    <script type="module" src="/js/paginas/aplicacion.js"></script>
+</body>
+</html>
